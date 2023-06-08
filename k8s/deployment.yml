@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: register-service
+spec:
+  selector:
+    matchLabels:
+      app: register-service
+  template:
+    metadata:
+      labels:
+        app: register-service
+    spec:
+      containers:
+      - name: register-service
+        image: IMAGE_URL/v1-register
+        ports:
+        - containerPort: 8080
+        env:
+            - name: server.port
+              value: ' 8080'
+            - name: spring.datasource.driverClassName
+              value: org.h2.Driver
+            - name: spring.datasource.password
+              value: sa
+            - name: spring.datasource.url
+              value: jdbc:h2:mem:testdb
+            - name: spring.datasource.username
+              value: sa
+            - name: spring.h2.console.enabled
+              value: "true"
+            - name: spring.h2.console.path
+              value: /h2-ui
+            - name: spring.jpa.hibernate.ddl-auto
+              value: ' update'
+            - name: spring.jpa.properties.hibernate.dialect
+              value: org.hibernate.dialect.H2Dialect
+            - name: spring.jpa.show-sql
+              value: "true"
+            - name: spring.kafka.bootstrap-servers
+              value: kafka:9092
+            - name: spring.kafka.producer.key-serializer
+              value: ' org.apache.kafka.common.serialization.StringSerializer'
+            - name: spring.kafka.producer.value-serializer
+              value: ' org.apache.kafka.common.serialization.StringSerializer'
+            - name: topic.name
+              value: t.online.hotel
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: register-service-svc
+spec:
+  selector:
+    app: register-service
+  ports:
+  - port: 80
+    targetPort: 8080
+

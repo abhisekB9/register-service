@@ -116,7 +116,8 @@
 						<image>openjdk:11</image>
 					</from>
 					<to>
-						<image>registry.hub.docker.com/devdforcode9/v1-${project.artifactId}</image>
+						<!--suppress UnresolvedMavenProperty -->
+						<image>${REPO_URL}/v1-${project.artifactId}</image>
 						<tags>${project.version}</tags>
 					</to>
 				</configuration>
