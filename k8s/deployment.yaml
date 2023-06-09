@@ -17,6 +17,8 @@ spec:
         ports:
         - containerPort: 8085
         env:
+            - name: server.port
+              value: '8085'
             - name: spring.datasource.driverClassName
               value: org.h2.Driver
             - name: spring.datasource.password
