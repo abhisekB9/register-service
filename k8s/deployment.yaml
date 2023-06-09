@@ -15,7 +15,7 @@ spec:
       - name: register-service
         image: IMAGE_URL/v1-register
         ports:
-        - containerPort: 8080
+        - containerPort: 8085
         env:
             - name: spring.datasource.driverClassName
               value: org.h2.Driver
@@ -54,5 +54,5 @@ spec:
     app: register-service
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 8085
 
