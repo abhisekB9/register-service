@@ -24,6 +24,7 @@ public class HotelControllerTest {
     @Autowired
     private MockMvc mvc;
 
+
     @MockBean
     private HotelService service;
 

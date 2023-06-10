@@ -17,7 +17,7 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-public class RegisterServiceApplicationTests {
+public class RegisterServiceApplicationTest {
 
 	@LocalServerPort
 	private int port;
