@@ -4,10 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.online.travel.register.entity.Hotel;
 import com.online.travel.register.repository.HotelRepository;
 import com.online.travel.register.util.Producer;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class HotelService {
 
     @Autowired
@@ -18,7 +20,8 @@ public class HotelService {
 
     public Hotel saveHotel(Hotel hotel) throws JsonProcessingException {
         Hotel savedHotel = hotelRepository.save(hotel);
-        producer.sendMessage(savedHotel);
+        String message = producer.sendMessage(savedHotel);
+        log.info("Message : {}", message);
         return savedHotel;
     }
 }
