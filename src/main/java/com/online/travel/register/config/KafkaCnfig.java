@@ -1,4 +1,3 @@
-/*
 package com.online.travel.register.config;
 
 import org.apache.kafka.clients.admin.AdminClientConfig;
@@ -59,4 +58,3 @@ public class KafkaCnfig {
                 .build();
     }
 }
-*/

@@ -37,14 +37,14 @@ spec:
               value: org.hibernate.dialect.H2Dialect
             - name: spring.jpa.show-sql
               value: "true"
-#            - name: spring.kafka.bootstrap-servers
-#              value: kafka:9092
-#            - name: spring.kafka.producer.key-serializer
-#              value: ' org.apache.kafka.common.serialization.StringSerializer'
-#            - name: spring.kafka.producer.value-serializer
-#              value: ' org.apache.kafka.common.serialization.StringSerializer'
-#            - name: topic.name
-#              value: t.online.hotel
+            - name: spring.kafka.bootstrap-servers
+              value: kafka:9092
+            - name: spring.kafka.producer.key-serializer
+              value: ' org.apache.kafka.common.serialization.StringSerializer'
+            - name: spring.kafka.producer.value-serializer
+              value: ' org.apache.kafka.common.serialization.StringSerializer'
+            - name: topic.name
+              value: t.online.hotel
         
 ---
 apiVersion: v1

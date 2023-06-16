@@ -1,4 +1,3 @@
-/*
 package com.online.travel.register.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -34,4 +33,4 @@ public class HotelServiceTest {
         Hotel savedDto = service.saveHotel(dto);
         Assert.assertEquals(savedDto.getHotelName(),dto.getHotelName());
     }
-}*/
+}
