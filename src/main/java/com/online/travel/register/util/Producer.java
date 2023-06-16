@@ -1,3 +1,4 @@
+/*
 package com.online.travel.register.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -36,3 +37,4 @@ public class Producer {
         return "message sent";
     }
 }
+*/
