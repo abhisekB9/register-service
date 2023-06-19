@@ -14,13 +14,9 @@ public class HotelService {
     @Autowired
     private HotelRepository hotelRepository;
 
-//    @Autowired
-//    private Producer producer;
 
     public Hotel saveHotel(Hotel hotel) throws JsonProcessingException {
         Hotel savedHotel = hotelRepository.save(hotel);
-        //String message = producer.sendMessage(savedHotel);
-        //log.info("Message : {}", message);
         return savedHotel;
     }
 }

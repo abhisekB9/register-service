@@ -27,6 +27,4 @@ public class Hotel {
 
     @Column(name = "hotelPrice")
     private BigDecimal hotelPrice;
-
-    // More fields and objects will be added
 }
