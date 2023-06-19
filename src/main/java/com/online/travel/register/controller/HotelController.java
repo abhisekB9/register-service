@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/hotel")
+@RequestMapping("/hotel/register")
 public class HotelController {
 
     @Autowired
     private HotelService service;
 
-    @PostMapping("/save")
+    @PostMapping
     public Hotel saveHotel(@RequestBody Hotel hotel) throws JsonProcessingException {
         return service.saveHotel(hotel);
     }
