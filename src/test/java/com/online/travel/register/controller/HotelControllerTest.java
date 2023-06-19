@@ -32,7 +32,7 @@ public class HotelControllerTest {
     public void createHotel() throws Exception
     {
         mvc.perform( MockMvcRequestBuilders
-                        .post("/hotel/save")
+                        .post("/hotel/register/save")
                         .content(asJsonString(Hotel.builder().hotelDescription("desc")
                                 .hotelName("name").hotelPrice(BigDecimal.valueOf(100)).build()))
                         .contentType(MediaType.APPLICATION_JSON)

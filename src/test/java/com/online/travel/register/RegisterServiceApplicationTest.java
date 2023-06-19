@@ -28,7 +28,7 @@ public class RegisterServiceApplicationTest {
 	public void testSaveHotel() throws Exception {
 		Hotel dto = Hotel.builder().hotelDescription("Desc").hotelName("name").hotelPrice(BigDecimal.valueOf(100)).build();
 
-		ResponseEntity<Hotel> response = restTemplate.postForEntity(createURLWithPort("/hotel/save"), dto, Hotel.class);
+		ResponseEntity<Hotel> response = restTemplate.postForEntity(createURLWithPort("/hotel/register/save"), dto, Hotel.class);
 
 		Hotel actual = response.getBody();
 

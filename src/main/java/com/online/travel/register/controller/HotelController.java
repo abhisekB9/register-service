@@ -13,7 +13,7 @@ public class HotelController {
     @Autowired
     private HotelService service;
 
-    @PostMapping
+    @PostMapping("/save")
     public Hotel saveHotel(@RequestBody Hotel hotel) throws JsonProcessingException {
         return service.saveHotel(hotel);
     }
