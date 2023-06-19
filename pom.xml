@@ -161,12 +161,12 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.version}</version>
-<!--				<configuration>-->
-<!--					<excludes>-->
-<!--						<exclude>com/dailycodebuffer/**/exception/*</exclude>-->
-<!--						<exclude>com/dailycodebuffer/**/entity/*</exclude>-->
-<!--					</excludes>-->
-<!--				</configuration>-->
+				<configuration>
+					<excludes>
+						<exclude>com/online/**/config/*</exclude>
+						<exclude>com/online/**/entity/*</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<id>jacoco-initialize</id>
